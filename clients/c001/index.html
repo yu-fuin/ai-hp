@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中武興業｜外装・内装・塗装工事（宮崎市）</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="中武興業">
+<meta property="og:title" content="中武興業｜外装・内装・塗装工事（宮崎市）">
+<meta property="og:description" content="宮崎市の中武興業。外装・内装・塗装工事、リフォーム工事などを行っています。">
+<meta property="og:url" content="https://yu-fuin.github.io/ai-hp/clients/c001/">
+<meta property="og:image" content="https://yu-fuin.github.io/ai-hp/clients/c001/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
 <meta name="description" content="宮崎市の中武興業。外装・内装・塗装工事、リフォーム工事などを行っています。">
 <style>
@@ -33,6 +40,7 @@
   .head-tel { display: flex; align-items: center; gap: 12px; background: var(--sky); color: #fff; padding: 0 28px; text-decoration: none; }
   .head-tel .ico { flex: none; width: 40px; height: 40px; border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
   .head-tel .num { font-size: 1.15rem; font-weight: 800; letter-spacing: .04em; line-height: 1.3; }
+  .sp-only { display: none; }
   .head-tel .cap { font-size: .65rem; letter-spacing: .08em; opacity: .95; }
 
   /* ===== トップ ===== */
@@ -82,10 +90,21 @@
   .reason-pic .cap h2 { margin: 0; font-size: 1.6rem; font-weight: 800; }
   .reason-list { padding: 40px 20px; }
   .reason-item { display: flex; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--pale2); }
-  .reason-item .no { font-size: 2.6rem; font-weight: 800; color: var(--pale2); width: 1.9em; line-height: 1; }
+  .reason-item .no { font-size: 2.6rem; font-weight: 800; color: #6fb6e2; width: 1.9em; line-height: 1; }
   .reason-item .ic { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--pale); color: var(--sky); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; }
   .reason-item h3 { margin: 0 0 2px; color: var(--sky); font-size: 1.2rem; }
   .reason-item p { margin: 0; font-size: .9rem; color: #566; }
+
+  /* ===== 施工事例 ===== */
+  .works-sec { background: var(--pale); }
+  .works { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .work { min-width: 0; background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 6px 22px rgba(14,44,102,.08); }
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .ba div { min-width: 0; position: relative; aspect-ratio: 4 / 3; background: #ccc; color: #555; display: flex; align-items: center; justify-content: center; text-align: center; font-size: .8rem; border-radius: 6px; }
+  .ba b { position: absolute; left: 6px; top: 6px; background: var(--navy); color: #fff; font-size: .62rem; letter-spacing: .12em; padding: 1px 8px; border-radius: 3px; }
+  .ba div:last-child b { background: var(--sky); }
+  .work h3 { margin: 12px 4px 0; font-size: 1rem; color: var(--navy); }
+  .work p { margin: 2px 4px 4px; font-size: .85rem; color: #566; }
 
   /* ===== 会社概要 ===== */
   .about-table { width: 100%; border-collapse: collapse; }
@@ -147,9 +166,14 @@
     .head-tel { margin-left: auto; padding: 0 14px; }
     .head-tel .ico { width: 30px; height: 30px; font-size: .85rem; }
     .head-tel .num { font-size: .78rem; }
-    nav { order: 3; width: 100%; overflow-x: auto; white-space: nowrap; border-top: 1px solid var(--pale2); gap: 0; }
-    nav a { flex: none; padding: 6px 12px; font-size: .8rem; }
-    nav a::after { bottom: 3px; left: 10px; right: 10px; }
+    nav { order: 3; width: 100%; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--pale2); gap: 0; }
+    nav a { padding: 6px 0; font-size: .74rem; letter-spacing: 0; }
+    nav a small { font-size: .5rem; letter-spacing: .04em; }
+    nav a::after { bottom: 3px; left: 8px; right: 8px; }
+    .n-contact { display: none !important; }
+    .pc-only { display: none; }
+    .sp-only { display: inline; }
+    .head-tel .cap { display: none; }
     .hero { display: block; min-height: 0; padding: 104px 16px 0; background: #fff; }
     .hero::before { position: static; display: block; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; }
     .hero::after { display: none; }
@@ -169,7 +193,8 @@
     .logo .en { letter-spacing: .12em; }
     .head-tel { padding: 0 10px; gap: 6px; }
     .head-tel .ico { display: none; }
-    .head-tel .num { font-size: .72rem; }
+    .head-tel .num { font-size: .8rem; }
+    nav a { font-size: .68rem; }
   }
   @media (min-width: 860px) {
     section { padding: 88px 32px; }
@@ -177,6 +202,7 @@
     .hero h1 { font-size: 3.2rem; letter-spacing: .1em; }
     header { min-height: 92px; }
     .svc { grid-template-columns: repeat(3, 1fr); }
+    .works { grid-template-columns: repeat(3, 1fr); }
     .reason { padding: 0; }
     .reason-grid { grid-template-columns: 1.05fr 1fr; }
     .reason-pic { min-height: 560px; clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%); }
@@ -195,14 +221,15 @@
   <nav>
     <a class="on" href="#top">トップ<small>TOP</small></a>
     <a href="#service">事業内容<small>SERVICES</small></a>
-    <a href="#reason">選ばれる理由<small>REASON</small></a>
+    <a href="#works">施工事例<small>WORKS</small></a>
     <a href="#about">会社概要<small>COMPANY</small></a>
     <a href="#recruit">採用情報<small>RECRUIT</small></a>
-    <a href="#contact">お問い合わせ<small>CONTACT</small></a>
+    <a class="n-contact" href="#contact">お問い合わせ<small>CONTACT</small></a>
   </nav>
+  <!-- 電話番号が決まったら、下の href="#contact" を href="tel:0985XXXXXXX"（ハイフンなし）に、「電話番号：要確認」を実際の番号に差し替える -->
   <a class="head-tel" href="#contact">
     <span class="ico">☎</span>
-    <span><span class="num">電話番号：要確認</span><br><span class="cap">受付 8:00〜17:00</span></span>
+    <span><span class="num"><span class="pc-only">電話番号：要確認</span><span class="sp-only">お問い合わせ</span></span><br><span class="cap">受付 8:00〜17:00</span></span>
   </a>
 </header>
 
@@ -257,7 +284,21 @@
     <div class="reason-list">
       <div class="reason-item"><span class="no">01</span><span class="ic">施</span><div><h3>幅広い施工</h3><p>外装・内装・塗装・リフォームまで、幅広い工事に対応します。</p></div></div>
       <div class="reason-item"><span class="no">02</span><span class="ic">仕</span><div><h3>丁寧な仕上げ</h3><p>各現場での補修や仕上げ作業を、丁寧に行います。</p></div></div>
-      <div class="reason-item"><span class="no">03</span><span class="ic">人</span><div><h3>一から教えます</h3><p>初心者でも一から丁寧に教えます。経験に応じて業務をお任せします。</p></div></div>
+      <div class="reason-item"><span class="no">03</span><span class="ic">地</span><div><h3>地元・宮崎市密着</h3><p>宮崎市を拠点に、地域のお客様のご相談に対応します。<span class="tbc">（内容は要確認）</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="works-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-title"><span class="en">WORKS</span><h2>施工事例</h2></div>
+      <p class="sec-lead">施工前・施工後の写真を掲載します。<br><span class="tbc">（写真・内容は準備中。要確認）</span></p>
+    </div>
+    <div class="works">
+      <div class="work"><div class="ba"><div><b>BEFORE</b>写真差し替え</div><div><b>AFTER</b>写真差し替え</div></div><h3>施工事例 1 <span class="tbc">（要確認）</span></h3><p>工事の種類・内容を記載します。</p></div>
+      <div class="work"><div class="ba"><div><b>BEFORE</b>写真差し替え</div><div><b>AFTER</b>写真差し替え</div></div><h3>施工事例 2 <span class="tbc">（要確認）</span></h3><p>工事の種類・内容を記載します。</p></div>
+      <div class="work"><div class="ba"><div><b>BEFORE</b>写真差し替え</div><div><b>AFTER</b>写真差し替え</div></div><h3>施工事例 3 <span class="tbc">（要確認）</span></h3><p>工事の種類・内容を記載します。</p></div>
     </div>
   </div>
 </section>
@@ -269,7 +310,7 @@
     </div>
     <table class="about-table">
       <tr><th>会社名</th><td>中武興業</td></tr>
-      <tr><th>業種</th><td>外装・内装・塗装工事、各種業務</td></tr>
+      <tr><th>業種</th><td>外装・内装・塗装工事 <span class="tbc">（その他の業務内容は要確認）</span></td></tr>
       <tr><th>所在地</th><td>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span></td></tr>
       <tr><th>電話番号</th><td><span class="tbc">要確認</span></td></tr>
       <tr><th>営業時間</th><td>8:00〜17:00 <span class="tbc">（定休日は要確認）</span></td></tr>
@@ -311,12 +352,12 @@
     <div class="foot-grid">
       <div>
         <div class="flogo"><img src="logo-mark.svg" alt="" width="40" height="40">中武興業</div>
-        <p>外装・内装・塗装工事、各種業務</p>
+        <p>外装・内装・塗装工事</p>
         <p>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span><br>電話：<span class="tbc">要確認</span>　営業時間：8:00〜17:00</p>
       </div>
       <div>
         <h4>サイトメニュー</h4>
-        <ul><li><a href="#top">トップ</a></li><li><a href="#service">事業内容</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#about">会社概要</a></li><li><a href="#recruit">採用情報</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
+        <ul><li><a href="#top">トップ</a></li><li><a href="#service">事業内容</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#works">施工事例</a></li><li><a href="#about">会社概要</a></li><li><a href="#recruit">採用情報</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
       </div>
       <div>
         <h4>事業内容</h4>
