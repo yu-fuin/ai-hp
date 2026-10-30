@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【会社名】</title>
+<style>
+  :root { --main: #2b6cb0; --light: #f4f7fb; --text: #333; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: sans-serif; color: var(--text); line-height: 1.8; }
+  header { background: var(--main); color: #fff; padding: 12px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+  header .logo { font-weight: bold; font-size: 1.1rem; }
+  nav a { color: #fff; text-decoration: none; margin-left: 14px; font-size: .9rem; }
+  section { padding: 48px 16px; max-width: 960px; margin: 0 auto; }
+  section:nth-of-type(even) { background: var(--light); max-width: none; }
+  section:nth-of-type(even) > .inner { max-width: 960px; margin: 0 auto; }
+  h2 { border-left: 6px solid var(--main); padding-left: 10px; margin-top: 0; }
+  .photo { background: #ccc; color: #555; display: flex; align-items: center; justify-content: center; min-height: 200px; border-radius: 6px; text-align: center; }
+  .hero { text-align: center; }
+  .hero h1 { font-size: 1.6rem; margin: 16px 0 8px; }
+  table { border-collapse: collapse; width: 100%; background: #fff; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; vertical-align: top; }
+  th { background: var(--light); width: 30%; }
+  .cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 16px; }
+  .card .photo { min-height: 120px; margin-bottom: 10px; }
+  .btn { display: inline-block; background: var(--main); color: #fff; padding: 12px 24px; border-radius: 4px; text-decoration: none; }
+  footer { background: #333; color: #fff; text-align: center; padding: 16px; font-size: .85rem; }
+  @media (min-width: 720px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    header { padding: 12px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">【会社名】</div>
+  <nav>
+    <a href="#top">トップ</a>
+    <a href="#about">会社概要</a>
+    <a href="#service">サービス</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<section id="top" class="hero">
+  <div class="photo">写真差し替え</div>
+  <h1>【キャッチコピー（要確認）】</h1>
+  <p>【会社の紹介文を一言で】</p>
+  <a class="btn" href="#contact">お問い合わせはこちら</a>
+</section>
+
+<section id="about">
+  <div class="inner">
+    <h2>会社概要</h2>
+    <table>
+      <tr><th>会社名</th><td>【会社名】</td></tr>
+      <tr><th>業種</th><td>【業種】</td></tr>
+      <tr><th>所在地</th><td>【所在地】</td></tr>
+      <tr><th>電話番号</th><td>【電話番号】</td></tr>
+      <tr><th>営業時間</th><td>【営業時間】</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="service">
+  <h2>サービス</h2>
+  <div class="cards">
+    <div class="card"><div class="photo">写真差し替え</div><h3>【サービス1】</h3><p>【説明】</p></div>
+    <div class="card"><div class="photo">写真差し替え</div><h3>【サービス2】</h3><p>【説明】</p></div>
+    <div class="card"><div class="photo">写真差し替え</div><h3>【サービス3】</h3><p>【説明】</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <h2>お問い合わせ</h2>
+    <p>お気軽にご連絡ください。</p>
+    <p>電話：【電話番号】<br>受付時間：【営業時間】</p>
+  </div>
+</section>
+
+<footer>&copy; 【会社名】</footer>
+
+</body>
+</html>
