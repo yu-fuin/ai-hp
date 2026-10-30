@@ -6,132 +6,215 @@
 <title>中武興業｜外装・内装・塗装工事（宮崎市）</title>
 <meta name="description" content="宮崎市の中武興業。外装・内装・塗装工事、リフォーム工事などを行っています。">
 <style>
-  :root { --main: #0b6a94; --dark: #004f70; --light: #eaf5fd; --soft: #d2e6ef; --accent: #edab31; --text: #2b2b2b; }
+  :root { --sky: #2e9bd8; --navy: #0e2c66; --pale: #eaf5fc; --pale2: #d6ebf8; --accent: #edab31; --text: #2b3445; }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
-  body { margin: 0; font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; color: var(--text); line-height: 1.8; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; color: var(--text); line-height: 1.9; background: #fff; }
+  a { color: inherit; }
   .tbc { color: #b45309; font-weight: bold; }
+  .wrap { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  section { padding: 64px 16px; position: relative; }
 
-  /* 上のバー */
-  header { position: fixed; top: 0; left: 0; right: 0; z-index: 10; background: rgba(255,255,255,.93); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 8px 16px; }
-  .logo { font-weight: bold; font-size: 1.3rem; color: var(--dark); letter-spacing: .12em; }
-  nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
-  nav a { color: var(--dark); text-decoration: none; font-size: .85rem; font-weight: bold; }
-  .tel { color: var(--dark); font-size: .8rem; line-height: 1.3; }
-  .head-btn { background: var(--dark); color: #fff; text-decoration: none; font-weight: bold; font-size: .85rem; padding: 8px 16px; border-radius: 3px; }
-  .head-right { display: flex; align-items: center; gap: 12px; }
+  /* ===== 上のバー ===== */
+  header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: var(--sky); color: #fff; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; padding: 8px 16px; box-shadow: 0 2px 8px rgba(14,44,102,.15); }
+  .logo { font-weight: 800; font-size: 1.35rem; letter-spacing: .14em; }
+  .logo small { display: block; font-size: .6rem; font-weight: 400; letter-spacing: .1em; opacity: .9; }
+  nav { display: flex; gap: 4px 20px; flex-wrap: wrap; }
+  nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: .88rem; letter-spacing: .06em; }
+  .head-btn { border: 1.5px solid #fff; border-radius: 999px; padding: 6px 20px; text-decoration: none; font-weight: bold; font-size: .88rem; color: #fff; }
+  .head-btn::before { content: "✉ "; }
 
-  /* トップ（大きな写真に文字を重ねる） */
-  .hero { position: relative; min-height: 100vh; padding-top: 110px; display: flex; align-items: center; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; color: var(--dark); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,.75), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
-  .hero .ph-label { position: absolute; z-index: 1; right: 16px; bottom: 90px; background: rgba(255,255,255,.75); color: #555; padding: 4px 12px; border-radius: 3px; font-size: .85rem; }
-  .hero .inner { position: relative; padding: 0 16px 80px; max-width: 1100px; margin: 0 auto; width: 100%; }
-  .hero h1 { font-size: 1.55rem; font-weight: 400; letter-spacing: .08em; line-height: 1.7; margin: 0 0 16px; }
-  .hero p { font-weight: bold; letter-spacing: .06em; margin: 0 0 24px; max-width: 30em; }
-  .hero::after { content: ""; position: absolute; left: -5%; right: -5%; bottom: -60px; height: 120px; background: #fff; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  /* ===== トップ ===== */
+  .hero { min-height: 100vh; padding: 120px 16px 0; display: flex; align-items: center; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; color: var(--navy); overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
+  .hero .wrap { position: relative; z-index: 1; padding-bottom: 110px; width: 100%; }
+  .hero .en-tag { color: var(--navy); font-weight: bold; letter-spacing: .3em; font-size: .85rem; margin: 0 0 10px; }
+  .hero h1 { font-size: 1.7rem; font-weight: 500; letter-spacing: .1em; line-height: 1.7; margin: 0 0 16px; }
+  .hero p.sub { font-weight: bold; letter-spacing: .05em; margin: 0 0 26px; }
+  .hero::after { content: ""; position: absolute; left: -5%; right: -5%; bottom: -70px; height: 130px; background: #fff; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  .img-note { position: absolute; z-index: 2; right: 84px; bottom: 90px; background: rgba(255,255,255,.8); color: #555; padding: 2px 12px; border-radius: 3px; font-size: .78rem; }
 
-  .btn { display: inline-block; background: var(--accent); color: #333; font-weight: bold; padding: 12px 28px; border-radius: 3px; text-decoration: none; }
+  /* ===== ボタン ===== */
+  .pill { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-width: 260px; background: var(--sky); color: #fff; text-decoration: none; font-weight: bold; padding: 14px 28px; border-radius: 999px; }
+  .pill::after { content: "→"; font-size: 1.2rem; }
+  .pill.line { background: #fff; color: var(--sky); border: 1.5px solid var(--sky); }
+  .pill.gold { background: var(--accent); color: #2b2b2b; }
 
-  section { padding: 56px 16px; }
-  .wrap { max-width: 1100px; margin: 0 auto; }
-  .alt { background: var(--light); }
-  .en { font-size: 1.6rem; font-weight: bold; color: var(--dark); letter-spacing: .06em; margin: 0; }
-  .en small { font-size: .85rem; color: var(--main); margin-left: 12px; letter-spacing: 0; }
-  .lead { margin: 8px 0 28px; font-weight: bold; }
+  /* ===== 見出し ===== */
+  .sec-head { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; margin-bottom: 36px; }
+  .sec-title { border-left: 2px solid var(--pale2); padding: 2px 0 2px 28px; }
+  .sec-title .en { color: var(--sky); letter-spacing: .12em; font-size: 1.05rem; display: block; }
+  .sec-title h2 { margin: 0; font-size: 2rem; color: var(--navy); font-weight: 800; letter-spacing: .06em; line-height: 1.4; }
+  .sec-lead { font-weight: bold; margin: 0; max-width: 24em; }
+  .sec-head .pill { margin-left: auto; }
 
-  /* 3つの特長 */
-  .points { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
-  .point { background: var(--soft); text-align: center; padding: 28px 18px; }
-  .point .icon { width: 64px; height: 64px; margin: 0 auto 8px; border-radius: 50%; background: var(--dark); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
-  .point h3 { margin: 4px 0 8px; font-size: 1.3rem; color: var(--dark); }
-  .point p { margin: 0; font-size: .9rem; color: var(--dark); }
+  /* ===== 斜めの飾り ===== */
+  .slant::before { content: ""; position: absolute; top: 0; left: 0; width: 16%; height: 100%; background: linear-gradient(105deg, var(--pale) 60%, transparent 60%); pointer-events: none; }
 
-  /* 事業内容（番号つき写真カード） */
-  .biz { display: grid; grid-template-columns: 1fr; gap: 14px; }
-  .biz-card { position: relative; min-height: 240px; background: #ccc center / cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; overflow: hidden; }
-  .biz-card .ph-label { position: absolute; top: 12px; left: 12px; color: #555; font-size: .85rem; background: rgba(255,255,255,.7); padding: 2px 10px; border-radius: 3px; }
-  .biz-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,79,112,0) 35%, rgba(0,79,112,.9)); }
-  .biz-card * { position: relative; z-index: 1; }
-  .biz-card .ph-label { position: absolute; z-index: 1; }
-  .biz-card .no { font-size: 1.8rem; font-weight: bold; line-height: 1.2; }
-  .biz-card h3 { margin: 0; font-size: 1.05rem; }
-  .biz-card p { margin: 4px 0 0; font-size: .85rem; }
+  /* ===== 事業内容 ===== */
+  .svc { display: grid; grid-template-columns: 1fr; gap: 20px; position: relative; }
+  .svc-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 22px rgba(14,44,102,.1); }
+  .svc-card .pic { aspect-ratio: 3 / 2; background: #ccc center / cover no-repeat; position: relative; }
+  .svc-card .body { padding: 18px 20px 22px; }
+  .svc-card .ttl { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .svc-card .ic { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--pale); color: var(--sky); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; }
+  .svc-card h3 { margin: 0; font-size: 1.1rem; color: var(--navy); }
+  .svc-card p { margin: 0; font-size: .9rem; color: #566; }
 
-  table { border-collapse: collapse; width: 100%; background: #fff; }
-  th, td { border: 1px solid #d5dce6; padding: 10px; text-align: left; vertical-align: top; }
-  th { background: var(--light); width: 30%; }
-  .alt table th { background: var(--soft); }
+  /* ===== 選ばれる理由 ===== */
+  .reason { padding: 0; background: #fff; overflow: hidden; }
+  .reason-grid { display: grid; grid-template-columns: 1fr; }
+  .reason-pic { min-height: 260px; background: url(service1.jpg) center / cover no-repeat; position: relative; }
+  .reason-pic .cap { position: absolute; left: 16px; right: 16px; bottom: 16px; color: var(--navy); background: rgba(255,255,255,.88); padding: 14px 18px; border-radius: 8px; }
+  .reason-pic .cap .en { color: var(--sky); letter-spacing: .12em; display: block; font-size: .9rem; }
+  .reason-pic .cap h2 { margin: 0; font-size: 1.6rem; font-weight: 800; }
+  .reason-list { padding: 40px 20px; }
+  .reason-item { display: flex; align-items: center; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--pale2); }
+  .reason-item .no { font-size: 2.6rem; font-weight: 800; color: var(--pale2); width: 1.9em; line-height: 1; }
+  .reason-item .ic { flex: none; width: 56px; height: 56px; border-radius: 50%; background: var(--pale); color: var(--sky); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; }
+  .reason-item h3 { margin: 0 0 2px; color: var(--sky); font-size: 1.2rem; }
+  .reason-item p { margin: 0; font-size: .9rem; color: #566; }
 
-  .recruit { background: var(--dark); color: #fff; text-align: center; }
-  .recruit .en { color: #fff; }
-  .recruit p { max-width: 36em; margin: 12px auto; }
+  /* ===== 会社概要 ===== */
+  .about-table { width: 100%; border-collapse: collapse; }
+  .about-table th, .about-table td { padding: 16px 12px; border-bottom: 1px solid var(--pale2); text-align: left; vertical-align: top; }
+  .about-table th { width: 28%; color: var(--navy); white-space: nowrap; }
+  .about-table th::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--sky); border-radius: 50%; margin-right: 10px; }
 
-  footer { background: var(--dark); color: #fff; text-align: center; padding: 16px; font-size: .85rem; border-top: 1px solid rgba(255,255,255,.2); }
+  /* ===== 採用 ===== */
+  .recruit { background: linear-gradient(120deg, var(--navy) 55%, #1b4a9a); color: #fff; text-align: center; overflow: hidden; }
+  .recruit .sec-title { border-color: rgba(255,255,255,.3); text-align: left; display: inline-block; }
+  .recruit .sec-title h2 { color: #fff; }
+  .recruit .sec-title .en { color: #8fd0f5; }
+  .recruit p { max-width: 34em; margin: 16px auto; }
+  .recruit .tbc { color: var(--accent); }
 
-  @media (min-width: 760px) {
-    header { padding: 8px 32px; }
-    .hero h1 { font-size: 3.2rem; letter-spacing: .15em; }
-    .hero .inner { padding: 0 32px 80px; }
-    .points { grid-template-columns: repeat(3, 1fr); }
-    .biz { grid-template-columns: repeat(3, 1fr); }
-    .biz-card { min-height: 300px; }
-    section { padding: 72px 32px; }
+  /* ===== お問い合わせ ===== */
+  .contact { background: #1d5da3 url(hero.jpg) center / cover no-repeat; }
+  .contact::before { content: ""; position: absolute; inset: 0; background: rgba(14,44,102,.55); }
+  .contact .card { position: relative; background: #fff; border-radius: 20px; padding: 36px 24px; max-width: 920px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+  .contact .card h2 { margin: 0 0 6px; color: var(--navy); text-align: center; font-size: 1.7rem; }
+  .contact .card .en { color: var(--sky); text-align: center; letter-spacing: .14em; display: block; }
+  .contact .card .lead { text-align: center; margin: 8px 0 24px; }
+  .contact-cols { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .contact-col { background: var(--pale); border-radius: 12px; padding: 20px; text-align: center; }
+  .contact-col h3 { margin: 0 0 6px; color: var(--navy); }
+  .contact-col .big { font-size: 1.5rem; font-weight: 800; color: var(--sky); margin: 4px 0; }
+  .contact-col p { margin: 0; font-size: .88rem; }
+
+  /* ===== フッター ===== */
+  footer { background: var(--navy); color: #fff; padding: 48px 16px 20px; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  footer h4 { margin: 0 0 10px; font-size: 1rem; }
+  footer ul { list-style: none; padding: 0; margin: 0; font-size: .88rem; }
+  footer li::before { content: "＞ "; color: #8fd0f5; }
+  footer li { margin: 4px 0; }
+  footer .flogo { font-size: 1.5rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 8px; }
+  footer p { font-size: .85rem; margin: 6px 0; }
+  .copy { text-align: center; font-size: .78rem; border-top: 1px solid rgba(255,255,255,.2); margin-top: 28px; padding-top: 14px; }
+  .totop { position: fixed; right: 14px; bottom: 14px; z-index: 15; width: 58px; height: 58px; border-radius: 50%; background: var(--sky); color: #fff; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: .6rem; line-height: 1.2; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+  .totop b { font-size: 1.2rem; }
+
+  @media (max-width: 859px) {
+    header { display: grid; grid-template-columns: 1fr auto; align-items: center; }
+    .head-btn { grid-column: 2; grid-row: 1; padding: 5px 14px; font-size: .8rem; }
+    nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 18px; padding-bottom: 2px; }
+    nav a { font-size: .82rem; }
+    .hero { padding-top: 104px; }
+  }
+  @media (min-width: 860px) {
+    header { padding: 8px 40px; }
+    section { padding: 88px 32px; }
+    .hero { padding: 120px 32px 0; }
+    .hero h1 { font-size: 3.1rem; letter-spacing: .14em; }
+    .svc { grid-template-columns: repeat(3, 1fr); }
+    .reason { padding: 0; }
+    .reason-grid { grid-template-columns: 1.05fr 1fr; }
+    .reason-pic { min-height: 560px; clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%); }
+    .reason-pic .cap { left: auto; right: 14%; bottom: auto; top: 50%; transform: translateY(-50%); background: transparent; padding: 0; width: 55%; }
+    .reason-list { padding: 64px 40px 64px 0; }
+    .contact-cols { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1.6fr 1fr 1.2fr 1fr; }
+    .contact .card { padding: 48px 56px; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">中武興業</div>
+  <div class="logo">中武興業<small>NAKATAKE KOGYO</small></div>
   <nav>
-    <a href="#top">ホーム</a>
+    <a href="#top">トップ</a>
     <a href="#service">事業内容</a>
+    <a href="#reason">選ばれる理由</a>
     <a href="#about">会社概要</a>
     <a href="#recruit">採用情報</a>
-    <a href="#contact">お問い合わせ</a>
   </nav>
-  <div class="head-right">
-    <div class="tel">電話：<span class="tbc">要確認</span><br>受付 8:00〜17:00</div>
-    <a class="head-btn" href="#contact">お問い合わせ</a>
-  </div>
+  <a class="head-btn" href="#contact">お問い合わせ</a>
 </header>
 
-<section id="top" class="hero" style="padding-bottom:0">
-  <span class="ph-label">イメージ画像</span>
-  <div class="inner">
+<section id="top" class="hero">
+  <span class="img-note">イメージ画像</span>
+  <div class="wrap">
+    <p class="en-tag">EXTERIOR / INTERIOR / PAINTING</p>
     <h1>確かな仕上げで、<br>暮らしと街を支える。</h1>
-    <p>外装・内装・塗装工事から現場のサポートまで。<br>宮崎市を拠点に、丁寧な仕事で対応します。</p>
-    <a class="btn" href="#contact">お問い合わせはこちら</a>
+    <p class="sub">外装・内装・塗装工事から現場のサポートまで。<br>宮崎市を拠点に、丁寧な仕事で対応します。</p>
+    <a class="pill gold" href="#contact">お問い合わせはこちら</a>
   </div>
 </section>
 
-<section id="about-intro">
+<section id="service" class="slant">
   <div class="wrap">
-    <h2 class="en">中武興業の特長</h2>
-    <div class="points">
-      <div class="point"><div class="icon">施</div><h3>幅広い施工</h3><p>外装・内装・塗装・リフォームまで、幅広い工事に対応します。</p></div>
-      <div class="point"><div class="icon">仕</div><h3>丁寧な仕上げ</h3><p>各現場での補修や仕上げ作業を、丁寧に行います。</p></div>
-      <div class="point"><div class="icon">人</div><h3>一から教えます</h3><p>初心者でも一から丁寧に教えます。経験に応じて業務をお任せします。</p></div>
+    <div class="sec-head">
+      <div class="sec-title"><span class="en">SERVICE</span><h2>主な事業</h2></div>
+      <p class="sec-lead">外装・内装・塗装の施工から<br>現場のサポートまで、幅広く対応します。</p>
     </div>
+    <div class="svc">
+      <div class="svc-card">
+        <div class="pic" style="background-image:url(service1.jpg)"></div>
+        <div class="body">
+          <div class="ttl"><span class="ic">施</span><h3>各種施工業務</h3></div>
+          <p>リフォーム工事、外装工事、内装工事、塗装工事などを行います。</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="pic" style="background-image:url(service2.jpg)"></div>
+        <div class="body">
+          <div class="ttl"><span class="ic">仕</span><h3>補修・仕上げ作業</h3></div>
+          <p>各現場での補修や仕上げ作業（外壁・内装の仕上げ、塗装など）を行います。</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="pic" style="background-image:url(service3.jpg)"></div>
+        <div class="body">
+          <div class="ttl"><span class="ic">支</span><h3>現場サポート業務</h3></div>
+          <p>資材の運搬、片付け、清掃など、現場を支える業務を行います。</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:right;font-size:.78rem;color:#889;margin:10px 0 0">※写真はイメージ画像です</p>
   </div>
 </section>
 
-<section id="service" class="alt">
-  <div class="wrap">
-    <h2 class="en">OUR BUSINESS<small>事業内容</small></h2>
-    <p class="lead">現場のニーズに応える、幅広い業務を行っています。</p>
-    <div class="biz">
-      <div class="biz-card" style="background-image:url(service1.jpg)"><span class="ph-label">イメージ画像</span><div class="no">01</div><h3>各種施工業務</h3><p>リフォーム工事、外装工事、内装工事、塗装工事など</p></div>
-      <div class="biz-card" style="background-image:url(service2.jpg)"><span class="ph-label">イメージ画像</span><div class="no">02</div><h3>補修・仕上げ作業</h3><p>外壁・内装の仕上げ、塗装など、各現場での作業</p></div>
-      <div class="biz-card" style="background-image:url(service3.jpg)"><span class="ph-label">イメージ画像</span><div class="no">03</div><h3>現場サポート業務</h3><p>資材の運搬・片付け・清掃など</p></div>
+<section id="reason" class="reason">
+  <div class="reason-grid">
+    <div class="reason-pic">
+      <div class="cap"><span class="en">REASON</span><h2>選ばれる理由</h2></div>
+    </div>
+    <div class="reason-list">
+      <div class="reason-item"><span class="no">01</span><span class="ic">施</span><div><h3>幅広い施工</h3><p>外装・内装・塗装・リフォームまで、幅広い工事に対応します。</p></div></div>
+      <div class="reason-item"><span class="no">02</span><span class="ic">仕</span><div><h3>丁寧な仕上げ</h3><p>各現場での補修や仕上げ作業を、丁寧に行います。</p></div></div>
+      <div class="reason-item"><span class="no">03</span><span class="ic">人</span><div><h3>一から教えます</h3><p>初心者でも一から丁寧に教えます。経験に応じて業務をお任せします。</p></div></div>
     </div>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap">
-    <h2 class="en">COMPANY<small>会社概要</small></h2>
-    <table style="margin-top:20px">
+    <div class="sec-head">
+      <div class="sec-title"><span class="en">COMPANY</span><h2>会社概要</h2></div>
+    </div>
+    <table class="about-table">
       <tr><th>会社名</th><td>中武興業</td></tr>
       <tr><th>業種</th><td>外装・内装・塗装工事、各種業務</td></tr>
       <tr><th>所在地</th><td>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span></td></tr>
@@ -143,26 +226,59 @@
 
 <section id="recruit" class="recruit">
   <div class="wrap">
-    <h2 class="en">RECRUIT<small style="color:#cfe6f2">採用情報</small></h2>
+    <div class="sec-title"><span class="en">RECRUIT</span><h2>採用情報</h2></div>
     <p>初心者でも一から丁寧に教えます。<br>経験やスキルに応じて、幅広い業務をお任せします。</p>
-    <p><span class="tbc" style="color:var(--accent)">募集の有無・給与・勤務条件・応募方法：要確認</span></p>
-    <a class="btn" href="#contact">お問い合わせ</a>
+    <p><span class="tbc">募集の有無・給与・勤務条件・応募方法：要確認</span></p>
+    <a class="pill gold" href="#contact">お問い合わせ</a>
   </div>
 </section>
 
-<section id="contact" class="alt">
+<section id="contact" class="contact">
+  <div class="card">
+    <span class="en">CONTACT</span>
+    <h2>お問い合わせ</h2>
+    <p class="lead">ご相談・お見積もりなど、お気軽にご連絡ください。</p>
+    <div class="contact-cols">
+      <div class="contact-col">
+        <h3>お電話でのお問い合わせ</h3>
+        <div class="big tbc">要確認</div>
+        <p>受付時間：8:00〜17:00<br><span class="tbc">（定休日は要確認）</span></p>
+      </div>
+      <div class="contact-col">
+        <h3>メールでのお問い合わせ</h3>
+        <div class="big tbc">要確認</div>
+        <p>お問い合わせフォームは準備中です<br><span class="tbc">（要確認）</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
   <div class="wrap">
-    <h2 class="en">CONTACT<small>お問い合わせ</small></h2>
-    <p>ご相談・お見積もりなど、お気軽にご連絡ください。</p>
-    <table>
-      <tr><th>電話</th><td><span class="tbc">要確認</span></td></tr>
-      <tr><th>受付時間</th><td>8:00〜17:00 <span class="tbc">（定休日は要確認）</span></td></tr>
-      <tr><th>所在地</th><td>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span></td></tr>
-    </table>
+    <div class="foot-grid">
+      <div>
+        <div class="flogo">中武興業</div>
+        <p>外装・内装・塗装工事、各種業務</p>
+        <p>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span><br>電話：<span class="tbc">要確認</span>　営業時間：8:00〜17:00</p>
+      </div>
+      <div>
+        <h4>サイトメニュー</h4>
+        <ul><li><a href="#top">トップ</a></li><li><a href="#service">事業内容</a></li><li><a href="#reason">選ばれる理由</a></li><li><a href="#about">会社概要</a></li><li><a href="#recruit">採用情報</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
+      </div>
+      <div>
+        <h4>事業内容</h4>
+        <ul><li>各種施工業務</li><li>補修・仕上げ作業</li><li>現場サポート業務</li></ul>
+      </div>
+      <div>
+        <h4>対応エリア</h4>
+        <p>宮崎市を中心に対応<br><span class="tbc">（対応範囲は要確認）</span></p>
+      </div>
+    </div>
+    <div class="copy">&copy; 中武興業</div>
   </div>
-</section>
+</footer>
 
-<footer>&copy; 中武興業</footer>
+<a class="totop" href="#top"><b>↑</b>TOP</a>
 
 </body>
 </html>
