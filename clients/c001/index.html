@@ -72,10 +72,9 @@
   .slides span { position: absolute; inset: 0; background-position: right center; background-size: cover; background-repeat: no-repeat; }
   .slides .s1 { background-image: url(hero.jpg); animation: fadeA 11s ease-in-out infinite; }
   .slides .s2 { background-image: url(hero2.jpg); animation: fadeB 11s ease-in-out infinite; }
-  .slides video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; }
   @keyframes fadeA { 0%, 36% { opacity: 1; } 50%, 86% { opacity: 0; } 100% { opacity: 1; } }
   @keyframes fadeB { 0%, 36% { opacity: 0; } 50%, 86% { opacity: 1; } 100% { opacity: 0; } }
-  @media (prefers-reduced-motion: reduce) { .slides .s1, .slides .s2 { animation: none; } .slides .s2 { display: none; } .slides video { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .slides .s1, .slides .s2 { animation: none; } .slides .s2 { display: none; } }
   .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
   .hero .wrap { position: relative; z-index: 2; padding-bottom: 110px; width: 100%; }
   .hero .en-tag { color: var(--navy); font-weight: bold; letter-spacing: .3em; font-size: .85rem; margin: 0 0 10px; }
@@ -209,7 +208,6 @@
     .hero::before { display: none; }
     /* スマホは写真を拡大して、被写体が中心に見える位置で切り取る */
     .slides .s1 { background-size: 128%; background-position: 100% 80%; }
-    .slides video { object-position: 92% 70%; transform: scale(1.18); transform-origin: 92% 70%; }
     .slides .s2 { background-size: 140%; background-position: 80% 62%; }
     .slides { position: relative; inset: auto; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3; }
     .hero::after { display: none; }
@@ -271,12 +269,7 @@
 
 <section id="top" class="hero">
   <span class="img-note">イメージ画像</span>
-  <div class="slides" aria-hidden="true"><span class="s1"></span><span class="s2"></span>
-    <video autoplay muted loop playsinline preload="auto" poster="hero.jpg" disablepictureinpicture>
-      <source src="hero.webm" type="video/webm">
-      <source src="hero.mp4" type="video/mp4">
-    </video>
-  </div>
+  <div class="slides" aria-hidden="true"><span class="s1"></span><span class="s2"></span></div>
   <div class="wrap">
     <p class="en-tag">EXTERIOR / INTERIOR / PAINTING</p>
     <h1>確かな仕上げで、<br>暮らしと<em>街</em>を支える。</h1>
