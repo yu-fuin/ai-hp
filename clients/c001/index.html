@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中武興業｜外装・内装・塗装工事（宮崎市）</title>
+<link rel="icon" type="image/svg+xml" href="logo-mark.svg">
 <meta name="description" content="宮崎市の中武興業。外装・内装・塗装工事、リフォーム工事などを行っています。">
 <style>
   :root { --sky: #2e9bd8; --navy: #0e2c66; --pale: #eaf5fc; --pale2: #d6ebf8; --accent: #edab31; --text: #2b3445; }
@@ -16,9 +17,14 @@
   section { padding: 64px 16px; position: relative; }
 
   /* ===== 上のバー ===== */
+  header, header * { white-space: nowrap; }
   header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: #fff; color: var(--navy); display: flex; align-items: stretch; justify-content: space-between; box-shadow: 0 2px 10px rgba(14,44,102,.12); }
-  .logo { display: flex; flex-direction: column; justify-content: center; padding: 8px 16px; font-weight: 800; font-size: 1.45rem; letter-spacing: .14em; color: var(--navy); text-decoration: none; line-height: 1.25; }
-  .logo small { font-size: .58rem; font-weight: 600; letter-spacing: .12em; color: var(--sky); }
+  .logo { display: flex; align-items: center; gap: 12px; padding: 8px 18px; color: var(--navy); text-decoration: none; }
+  .logo img { width: 52px; height: 52px; flex: none; border-radius: 12px; box-shadow: 0 3px 8px rgba(14,44,102,.3); }
+  .logo .nm { display: flex; flex-direction: column; line-height: 1.15; }
+  .logo .jp { font-size: 2rem; font-weight: 900; letter-spacing: .14em; color: var(--navy); text-shadow: 1px 1px 0 var(--pale2); }
+  .logo .jp::after { content: ""; display: block; height: 3px; margin-top: 3px; background: linear-gradient(90deg, var(--sky) 0 62%, var(--accent) 62% 100%); border-radius: 2px; }
+  .logo .en { font-size: .6rem; font-weight: 700; letter-spacing: .26em; color: var(--sky); margin-top: 3px; }
   nav { display: flex; align-items: stretch; gap: 0 6px; }
   nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 14px; color: var(--navy); text-decoration: none; font-weight: bold; font-size: .92rem; letter-spacing: .05em; line-height: 1.5; position: relative; }
   nav a small { font-size: .56rem; font-weight: 500; letter-spacing: .14em; color: #8a97ad; }
@@ -115,39 +121,61 @@
   footer ul { list-style: none; padding: 0; margin: 0; font-size: .88rem; }
   footer li::before { content: "＞ "; color: #8fd0f5; }
   footer li { margin: 4px 0; }
-  footer .flogo { font-size: 1.5rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 8px; }
+  footer .flogo { display: flex; align-items: center; gap: 10px; font-size: 1.7rem; font-weight: 900; letter-spacing: .14em; margin-bottom: 8px; }
+  footer .flogo img { border-radius: 9px; }
   footer p { font-size: .85rem; margin: 6px 0; }
   .copy { text-align: center; font-size: .78rem; border-top: 1px solid rgba(255,255,255,.2); margin-top: 28px; padding-top: 14px; }
   .totop { position: fixed; right: 14px; bottom: 14px; z-index: 15; width: 58px; height: 58px; border-radius: 50%; background: var(--sky); color: #fff; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: .6rem; line-height: 1.2; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
   .totop b { font-size: 1.2rem; }
 
-  @media (max-width: 1099px) {
-    nav a { padding: 0 9px; font-size: .84rem; }
-    .head-tel { padding: 0 16px; }
+  @media (max-width: 1199px) {
+    .logo .jp { font-size: 1.6rem; }
+    .logo img { width: 44px; height: 44px; }
+    nav a { padding: 0 8px; font-size: .8rem; }
+    nav a::after { left: 8px; right: 8px; }
+    nav a small { letter-spacing: .08em; }
+    .head-tel { padding: 0 14px; gap: 8px; }
+    .head-tel .num { font-size: .9rem; }
     .head-tel .cap { display: none; }
   }
   @media (max-width: 859px) {
     header { flex-wrap: wrap; }
-    .logo { padding: 6px 14px; font-size: 1.25rem; }
+    .logo { padding: 6px 12px; gap: 9px; }
+    .logo img { width: 38px; height: 38px; border-radius: 9px; }
+    .logo .jp { font-size: 1.45rem; }
+    .logo .en { font-size: .5rem; letter-spacing: .2em; }
     .head-tel { margin-left: auto; padding: 0 14px; }
     .head-tel .ico { width: 30px; height: 30px; font-size: .85rem; }
     .head-tel .num { font-size: .78rem; }
     nav { order: 3; width: 100%; overflow-x: auto; white-space: nowrap; border-top: 1px solid var(--pale2); gap: 0; }
     nav a { flex: none; padding: 6px 12px; font-size: .8rem; }
     nav a::after { bottom: 3px; left: 10px; right: 10px; }
-    .hero { display: block; min-height: 0; padding: 96px 16px 0; background: #fff; }
+    .hero { display: block; min-height: 0; padding: 104px 16px 0; background: #fff; }
     .hero::before { position: static; display: block; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; }
     .hero::after { display: none; }
     .hero .wrap { padding-bottom: 48px; }
     .hero .en-tag { font-size: .7rem; letter-spacing: .16em; }
     .hero p.sub { font-size: .9rem; }
-    .img-note { top: calc(96px + 58vw - 30px); bottom: auto; right: 10px; }
+    .img-note { top: calc(104px + 58vw - 30px); bottom: auto; right: 10px; }
+  }
+  @media (max-width: 859px) {
+    .logo .jp { font-size: 1.45rem; }
+    .logo img { width: 38px; height: 38px; }
+  }
+  @media (max-width: 400px) {
+    .logo { gap: 7px; padding: 6px 8px; }
+    .logo .jp { font-size: 1.25rem; letter-spacing: .1em; }
+    .logo img { width: 32px; height: 32px; }
+    .logo .en { letter-spacing: .12em; }
+    .head-tel { padding: 0 10px; gap: 6px; }
+    .head-tel .ico { display: none; }
+    .head-tel .num { font-size: .72rem; }
   }
   @media (min-width: 860px) {
     section { padding: 88px 32px; }
     .hero { padding: 120px 32px 0; }
     .hero h1 { font-size: 3.2rem; letter-spacing: .1em; }
-    header { min-height: 84px; }
+    header { min-height: 92px; }
     .svc { grid-template-columns: repeat(3, 1fr); }
     .reason { padding: 0; }
     .reason-grid { grid-template-columns: 1.05fr 1fr; }
@@ -163,7 +191,7 @@
 <body>
 
 <header>
-  <a class="logo" href="#top">中武興業<small>NAKATAKE KOGYO</small></a>
+  <a class="logo" href="#top"><img src="logo-mark.svg" alt=""><span class="nm"><span class="jp">中武興業</span><span class="en">NAKATAKE KOGYO</span></span></a>
   <nav>
     <a class="on" href="#top">トップ<small>TOP</small></a>
     <a href="#service">事業内容<small>SERVICES</small></a>
@@ -282,7 +310,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="flogo">中武興業</div>
+        <div class="flogo"><img src="logo-mark.svg" alt="" width="40" height="40">中武興業</div>
         <p>外装・内装・塗装工事、各種業務</p>
         <p>宮崎県宮崎市大字瓜生野 <span class="tbc">（番地は要確認）</span><br>電話：<span class="tbc">要確認</span>　営業時間：8:00〜17:00</p>
       </div>
