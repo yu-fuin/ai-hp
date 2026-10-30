@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 独自ドメインで公開したら、下のURLを、そのドメインのURLに書き換える。cXXX は案件番号に直す -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yu-fuin.github.io/ai-hp/clients/cXXX/</loc>
+  </url>
+</urlset>

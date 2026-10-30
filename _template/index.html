@@ -11,6 +11,30 @@
 <meta property="og:url" content="https://yu-fuin.github.io/ai-hp/clients/cXXX/">
 <meta property="og:image" content="https://yu-fuin.github.io/ai-hp/clients/cXXX/ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<!-- 検索エンジン向けの設定 -->
+<!-- 作成中は noindex（検索結果に出さない）。公開するときは、下の1行を消す -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://yu-fuin.github.io/ai-hp/clients/cXXX/">
+<!-- 会社情報（Googleに伝えるデータ）。分かっている項目だけ書き、分からない項目は行ごと消す（「要確認」と書かない）。
+     電話番号が決まったら "telephone": "+81-…" を、定休日が決まったら openingHoursSpecification を追加する -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "【会社名】",
+  "description": "【地域名】の【会社名】。【業種・サービスを1文で】",
+  "url": "https://yu-fuin.github.io/ai-hp/clients/cXXX/",
+  "logo": "https://yu-fuin.github.io/ai-hp/clients/cXXX/logo-mark.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "【都道府県】",
+    "addressLocality": "【市区町村】",
+    "streetAddress": "【番地など】"
+  },
+  "areaServed": { "@type": "City", "name": "【市区町村】" }
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
 <meta name="description" content="【地域名】の【会社名】。【業種・サービスを1文で】">
 <style>
@@ -231,7 +255,8 @@
   ・丸いマーク（○）の中は、サービスや理由を表す漢字1字に書き換える
   ・分からない項目は「要確認」と書く（根拠のない数字・実績は書かない）
   ・写真がない場所は、グレーの仮枠に「写真差し替え」と書いたままにする
-  ・og:url / og:image の cXXX を、案件番号（例：c002）に直す
+  ・og:url / og:image / canonical / 構造化データ（ld+json）/ robots.txt / sitemap.xml の cXXX を、案件番号（例：c002）に直す
+  ・公開するときは <meta name="robots" content="noindex"> の行を消す（それまでは検索結果に出ない）
   ・電話番号が決まったら、右上のボックスの href="#contact" を
     href="tel:ハイフンなしの番号" に変え、お問い合わせ欄・フッターも同様にする
   ・会社名が長い場合は、.logo .jp の文字サイズを小さくする

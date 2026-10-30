@@ -1,0 +1,6 @@
+# このファイルは、サイトのいちばん上のフォルダに置いたときに効きます。
+# （独自ドメインで公開したあと。github.io のURLの下では、検索エンジンは読みません）
+User-agent: *
+Allow: /
+
+Sitemap: https://yu-fuin.github.io/ai-hp/clients/cXXX/sitemap.xml
