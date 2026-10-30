@@ -22,8 +22,9 @@
   .head-right { display: flex; align-items: center; gap: 12px; }
 
   /* トップ（大きな写真に文字を重ねる） */
-  .hero { position: relative; min-height: 100vh; padding-top: 110px; display: flex; align-items: center; background: #ccc; color: var(--dark); overflow: hidden; }
-  .hero .ph-label { position: absolute; right: 16px; bottom: 90px; background: rgba(255,255,255,.75); color: #555; padding: 4px 12px; border-radius: 3px; font-size: .85rem; }
+  .hero { position: relative; min-height: 100vh; padding-top: 110px; display: flex; align-items: center; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; color: var(--dark); overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,.75), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
+  .hero .ph-label { position: absolute; z-index: 1; right: 16px; bottom: 90px; background: rgba(255,255,255,.75); color: #555; padding: 4px 12px; border-radius: 3px; font-size: .85rem; }
   .hero .inner { position: relative; padding: 0 16px 80px; max-width: 1100px; margin: 0 auto; width: 100%; }
   .hero h1 { font-size: 1.55rem; font-weight: 400; letter-spacing: .08em; line-height: 1.7; margin: 0 0 16px; }
   .hero p { font-weight: bold; letter-spacing: .06em; margin: 0 0 24px; max-width: 30em; }
@@ -47,7 +48,7 @@
 
   /* 事業内容（番号つき写真カード） */
   .biz { display: grid; grid-template-columns: 1fr; gap: 14px; }
-  .biz-card { position: relative; min-height: 240px; background: #ccc; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; overflow: hidden; }
+  .biz-card { position: relative; min-height: 240px; background: #ccc center / cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; overflow: hidden; }
   .biz-card .ph-label { position: absolute; top: 12px; left: 12px; color: #555; font-size: .85rem; background: rgba(255,255,255,.7); padding: 2px 10px; border-radius: 3px; }
   .biz-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,79,112,0) 35%, rgba(0,79,112,.9)); }
   .biz-card * { position: relative; z-index: 1; }
@@ -96,7 +97,7 @@
 </header>
 
 <section id="top" class="hero" style="padding-bottom:0">
-  <span class="ph-label">写真差し替え</span>
+  <span class="ph-label">イメージ画像</span>
   <div class="inner">
     <h1>確かな仕上げで、<br>暮らしと街を支える。</h1>
     <p>外装・内装・塗装工事から現場のサポートまで。<br>宮崎市を拠点に、丁寧な仕事で対応します。</p>
@@ -120,9 +121,9 @@
     <h2 class="en">OUR BUSINESS<small>事業内容</small></h2>
     <p class="lead">現場のニーズに応える、幅広い業務を行っています。</p>
     <div class="biz">
-      <div class="biz-card"><span class="ph-label">写真差し替え</span><div class="no">01</div><h3>各種施工業務</h3><p>リフォーム工事、外装工事、内装工事、塗装工事など</p></div>
-      <div class="biz-card"><span class="ph-label">写真差し替え</span><div class="no">02</div><h3>補修・仕上げ作業</h3><p>外壁・内装の仕上げ、塗装など、各現場での作業</p></div>
-      <div class="biz-card"><span class="ph-label">写真差し替え</span><div class="no">03</div><h3>現場サポート業務</h3><p>資材の運搬・片付け・清掃など</p></div>
+      <div class="biz-card" style="background-image:url(service1.jpg)"><span class="ph-label">イメージ画像</span><div class="no">01</div><h3>各種施工業務</h3><p>リフォーム工事、外装工事、内装工事、塗装工事など</p></div>
+      <div class="biz-card" style="background-image:url(service2.jpg)"><span class="ph-label">イメージ画像</span><div class="no">02</div><h3>補修・仕上げ作業</h3><p>外壁・内装の仕上げ、塗装など、各現場での作業</p></div>
+      <div class="biz-card" style="background-image:url(service3.jpg)"><span class="ph-label">イメージ画像</span><div class="no">03</div><h3>現場サポート業務</h3><p>資材の運搬・片付け・清掃など</p></div>
     </div>
   </div>
 </section>
