@@ -44,9 +44,16 @@
   .head-tel .cap { font-size: .65rem; letter-spacing: .08em; opacity: .95; }
 
   /* ===== トップ ===== */
-  .hero { min-height: 100vh; padding: 120px 16px 0; display: flex; align-items: center; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; color: var(--navy); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
-  .hero .wrap { position: relative; z-index: 1; padding-bottom: 110px; width: 100%; }
+  .hero { min-height: 100vh; padding: 120px 16px 0; display: flex; align-items: center; background: #cfe3f3; color: var(--navy); overflow: hidden; }
+  .slides { position: absolute; inset: 0; z-index: 0; }
+  .slides span { position: absolute; inset: 0; background-position: right center; background-size: cover; background-repeat: no-repeat; }
+  .slides .s1 { background-image: url(hero.jpg); animation: fadeA 16s ease-in-out infinite; }
+  .slides .s2 { background-image: url(hero2.jpg); animation: fadeB 16s ease-in-out infinite; }
+  @keyframes fadeA { 0%, 40% { opacity: 1; } 50%, 90% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes fadeB { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .slides .s1, .slides .s2 { animation: none; } .slides .s2 { display: none; } }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.35) 55%, rgba(255,255,255,0)); }
+  .hero .wrap { position: relative; z-index: 2; padding-bottom: 110px; width: 100%; }
   .hero .en-tag { color: var(--navy); font-weight: bold; letter-spacing: .3em; font-size: .85rem; margin: 0 0 10px; }
   .hero h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; font-size: 1.8rem; font-weight: 600; letter-spacing: .08em; line-height: 1.65; margin: 0 0 18px; }
   .hero h1 em { font-style: normal; color: var(--sky); }
@@ -175,7 +182,8 @@
     .sp-only { display: inline; }
     .head-tel .cap { display: none; }
     .hero { display: block; min-height: 0; padding: 104px 16px 0; background: #fff; }
-    .hero::before { position: static; display: block; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; }
+    .hero::before { display: none; }
+    .slides { position: relative; inset: auto; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3; }
     .hero::after { display: none; }
     .hero .wrap { padding-bottom: 48px; }
     .hero .en-tag { font-size: .7rem; letter-spacing: .16em; }
@@ -235,6 +243,7 @@
 
 <section id="top" class="hero">
   <span class="img-note">イメージ画像</span>
+  <div class="slides" aria-hidden="true"><span class="s1"></span><span class="s2"></span></div>
   <div class="wrap">
     <p class="en-tag">EXTERIOR / INTERIOR / PAINTING</p>
     <h1>確かな仕上げで、<br>暮らしと<em>街</em>を支える。</h1>
