@@ -135,7 +135,13 @@
     nav { order: 3; width: 100%; overflow-x: auto; white-space: nowrap; border-top: 1px solid var(--pale2); gap: 0; }
     nav a { flex: none; padding: 6px 12px; font-size: .8rem; }
     nav a::after { bottom: 3px; left: 10px; right: 10px; }
-    .hero { padding-top: 130px; }
+    .hero { display: block; min-height: 0; padding: 96px 16px 0; background: #fff; }
+    .hero::before { position: static; display: block; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3 url(hero.jpg) right center / cover no-repeat; }
+    .hero::after { display: none; }
+    .hero .wrap { padding-bottom: 48px; }
+    .hero .en-tag { font-size: .7rem; letter-spacing: .16em; }
+    .hero p.sub { font-size: .9rem; }
+    .img-note { top: calc(96px + 58vw - 30px); bottom: auto; right: 10px; }
   }
   @media (min-width: 860px) {
     section { padding: 88px 32px; }
