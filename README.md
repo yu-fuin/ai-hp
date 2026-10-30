@@ -7,3 +7,4 @@ AIホームページ事業部
 
 | 番号 | 業種 | 状況 | 確認URL |
 | --- | --- | --- | --- |
+| c001 | 建設・塗装工事 | 作成中 | https://yu-fuin.github.io/ai-hp/clients/c001/ |
