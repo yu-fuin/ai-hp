@@ -206,6 +206,9 @@
     .head-tel .cap { display: none; }
     .hero { display: block; min-height: 0; padding: 104px 16px 0; background: #fff; }
     .hero::before { display: none; }
+    /* スマホは写真を拡大して、被写体が中心に見える位置で切り取る */
+    .slides .s1 { background-size: 128%; background-position: 100% 80%; }
+    .slides .s2 { background-size: 140%; background-position: 80% 62%; }
     .slides { position: relative; inset: auto; height: 58vw; margin: 0 -16px 28px; background: #cfe3f3; }
     .hero::after { display: none; }
     .hero .wrap { padding-bottom: 48px; }
